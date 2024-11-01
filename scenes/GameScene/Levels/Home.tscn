@@ -1,14 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://4ionx33eq4yo"]
+[gd_scene load_steps=7 format=4 uid="uid://4ionx33eq4yo"]
 
 [ext_resource type="Script" path="res://scenes/GameScene/Levels/Level.gd" id="2_u6vy6"]
 [ext_resource type="Texture2D" uid="uid://7hwagwt2ijac" path="res://assets/images/tilesets/mossyCavern/TileSet.png" id="3_cgdux"]
-[ext_resource type="Texture2D" uid="uid://8thxjysyek2m" path="res://assets/images/character/blueWizard/Idle/Chara - BlueIdle00000.png" id="3_h62ya"]
-[ext_resource type="Script" path="res://scenes/GameScene/Player/Player.gd" id="3_lbpam"]
+[ext_resource type="PackedScene" uid="uid://cc2boic8t5im6" path="res://scenes/GameScene/Player/Player.tscn" id="3_ppe7o"]
 [ext_resource type="Script" path="res://scenes/GameScene/Levels/Home.gd" id="4_4t6v4"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7aa0l"]
-radius = 35.0
-height = 138.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgo6x"]
 resource_name = "MossyCavern"
@@ -94,17 +89,7 @@ offset_right = 720.0
 offset_bottom = 23.0
 text = "Home"
 
-[node name="Player" type="CharacterBody2D" parent="HomeCnt"]
-position = Vector2(300, 350)
-script = ExtResource("3_lbpam")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeCnt/Player"]
-position = Vector2(0, 3)
-shape = SubResource("CapsuleShape2D_7aa0l")
-
-[node name="Sprite2D" type="Sprite2D" parent="HomeCnt/Player"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_h62ya")
+[node name="Player" parent="HomeCnt" instance=ExtResource("3_ppe7o")]
 
 [node name="TMLPlatforms" type="TileMapLayer" parent="HomeCnt"]
 scale = Vector2(0.25, 0.25)
