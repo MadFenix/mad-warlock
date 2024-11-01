@@ -1,0 +1,355 @@
+[gd_scene load_steps=46 format=3 uid="uid://c6k5nnpbypshi"]
+
+[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/Menus/MainMenu/MainMenu.gd" id="1"]
+[ext_resource type="Theme" uid="uid://bv2a6wh6lyl20" path="res://default_theme.tres" id="1_5rqjn"]
+[ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/Menus/OptionsMenu/MasterOptionsMenuWithTabs.tscn" id="2_qvrrd"]
+[ext_resource type="PackedScene" uid="uid://be5jg3k5adenf" path="res://scenes/Menus/LoginMenu/Login.tscn" id="3_4ml3j"]
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/Credits/Credits.tscn" id="3_5dhvp"]
+[ext_resource type="PackedScene" uid="uid://c2nthotr6ea0y" path="res://scenes/Menus/SignUpMenu/SignUp.tscn" id="4_8k1gl"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/CaptureFocus.gd" id="4_l1ebe"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/MusicPlayers/BackgroundMusicPlayer.tscn" id="4_w8sbm"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/UISoundController.gd" id="6_bs342"]
+[ext_resource type="AudioStream" uid="uid://bg675o1nl4q50" path="res://assets/sound/sound_button.ogg" id="6_ddr5k"]
+[ext_resource type="Texture2D" uid="uid://ivojrbu4gg6m" path="res://assets/images/mainMenu/title_ca.png" id="7_mnawy"]
+[ext_resource type="Texture2D" uid="uid://c4p1auswxa2dd" path="res://assets/images/mainMenu/title_en.png" id="8_laf88"]
+[ext_resource type="Texture2D" uid="uid://br7hhjm30vfs" path="res://assets/images/mainMenu/bg_main.png" id="10_3fqs4"]
+[ext_resource type="Texture2D" uid="uid://fksmyddu5cib" path="res://assets/images/mainMenu/title_es.png" id="11_d1yp7"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="13_nol2y"]
+[ext_resource type="Texture2D" uid="uid://dl6ii1dfu72pb" path="res://assets/images/mainMenu/btn_play.png" id="14_dtnao"]
+[ext_resource type="Texture2D" uid="uid://cc784e47yi17j" path="res://assets/images/mainMenu/btn_play_p.png" id="15_cnf8l"]
+[ext_resource type="Texture2D" uid="uid://6cpkvshf4fh7" path="res://assets/images/mainMenu/btn_Options.png" id="16_8n5yk"]
+[ext_resource type="Texture2D" uid="uid://bvfv77au44fnv" path="res://assets/images/mainMenu/btn_Options_p.png" id="17_5fia4"]
+[ext_resource type="Texture2D" uid="uid://wmjclnyfkqoi" path="res://assets/images/mainMenu/btn_Credits.png" id="18_elqjp"]
+[ext_resource type="Texture2D" uid="uid://cm1menfb07h3e" path="res://assets/images/mainMenu/btn_Credits_p.png" id="19_22rg6"]
+[ext_resource type="Texture2D" uid="uid://bu8hfak456ja7" path="res://assets/images/mainMenu/btn_Login.png" id="20_rwwgf"]
+[ext_resource type="Texture2D" uid="uid://bwey58wx8eocy" path="res://assets/images/mainMenu/btn_Login_p.png" id="21_2n12k"]
+[ext_resource type="Texture2D" uid="uid://b0ctkmuwitac" path="res://assets/images/mainMenu/btn_es.png" id="22_jy6aq"]
+[ext_resource type="Texture2D" uid="uid://cnb08ij3djuc" path="res://assets/images/mainMenu/btn_en.png" id="23_ty45i"]
+[ext_resource type="Texture2D" uid="uid://xl8h37nhqn0f" path="res://assets/images/mainMenu/btn_es_s.png" id="23_wvvpd"]
+[ext_resource type="Texture2D" uid="uid://hlbmy2ov2nr8" path="res://assets/images/mainMenu/btn_ca.png" id="24_6b15j"]
+[ext_resource type="Texture2D" uid="uid://c283du2at18wk" path="res://assets/images/mainMenu/btn_en_s.png" id="25_cpxn5"]
+[ext_resource type="Texture2D" uid="uid://ca6cdpfklod6b" path="res://assets/images/login/btn_back_login.png" id="25_ikmlo"]
+[ext_resource type="Texture2D" uid="uid://dh3cndecfkw4b" path="res://assets/images/mainMenu/btn_ca_s.png" id="27_6kdi0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljltv"]
+texture = ExtResource("15_cnf8l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7v45"]
+texture = ExtResource("15_cnf8l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_genly"]
+texture = ExtResource("14_dtnao")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b07i3"]
+texture = ExtResource("17_5fia4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6c2xx"]
+texture = ExtResource("17_5fia4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw6de"]
+texture = ExtResource("16_8n5yk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf7e0"]
+texture = ExtResource("19_22rg6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7lpa"]
+texture = ExtResource("19_22rg6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w52s2"]
+texture = ExtResource("18_elqjp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ows3"]
+texture = ExtResource("21_2n12k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hb5w7"]
+texture = ExtResource("21_2n12k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3ijh"]
+texture = ExtResource("20_rwwgf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dh442"]
+texture = ExtResource("21_2n12k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwct8"]
+texture = ExtResource("21_2n12k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlu0w"]
+texture = ExtResource("20_rwwgf")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5rqjn")
+script = ExtResource("1")
+options_packed_scene = ExtResource("2_qvrrd")
+login_packed_scene = ExtResource("3_4ml3j")
+signup_packed_scene = ExtResource("4_8k1gl")
+credits_packed_scene = ExtResource("3_5dhvp")
+texture_title_ca = ExtResource("7_mnawy")
+texture_title_en = ExtResource("8_laf88")
+texture_title_es = ExtResource("11_d1yp7")
+
+[node name="UISoundController" type="Node" parent="."]
+script = ExtResource("6_bs342")
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("4_w8sbm")]
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_ddr5k")
+bus = &"SFX"
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_3fqs4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VersionNameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -33.0
+offset_right = -8.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+horizontal_alignment = 2
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer"]
+layout_mode = 2
+
+[node name="TitlesMargin" type="MarginContainer" parent="MenuContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 199
+
+[node name="TitlesContainer" type="VBoxContainer" parent="MenuContainer/VBoxContainer/TitlesMargin"]
+layout_mode = 2
+
+[node name="LogoTextureRect" type="TextureRect" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_d1yp7")
+stretch_mode = 2
+
+[node name="MenuMargin" type="MarginContainer" parent="MenuContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_bottom = 16
+
+[node name="MenuButtons" type="VBoxContainer" parent="MenuContainer/VBoxContainer/MenuMargin"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+script = ExtResource("4_l1ebe")
+
+[node name="PlayButton" type="Button" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" groups=["Button"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(336, 83)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("13_nol2y")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxTexture_ljltv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m7v45")
+theme_override_styles/normal = SubResource("StyleBoxTexture_genly")
+text = "Play"
+
+[node name="OptionsButton" type="Button" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" groups=["Button"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 111)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("13_nol2y")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxTexture_b07i3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6c2xx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw6de")
+text = "Optionss"
+
+[node name="CreditsButton" type="Button" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" groups=["Button"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 108)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("13_nol2y")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxTexture_yf7e0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j7lpa")
+theme_override_styles/normal = SubResource("StyleBoxTexture_w52s2")
+text = "Credits"
+
+[node name="LoginButton" type="Button" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" groups=["Button"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(339, 85)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("13_nol2y")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxTexture_6ows3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hb5w7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g3ijh")
+text = "Login"
+
+[node name="LogoutButton" type="Button" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" groups=["Button"]]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(339, 85)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("13_nol2y")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxTexture_dh442")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fwct8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qlu0w")
+text = "Logout
+"
+
+[node name="ExitButton" type="Button" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" groups=["Button"]]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Exit"
+
+[node name="LanguageMargin" type="MarginContainer" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons"]
+layout_mode = 2
+theme_override_constants/margin_top = 150
+
+[node name="LanguageButtons" type="HBoxContainer" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin"]
+layout_mode = 2
+
+[node name="SpanishButton" type="TextureButton" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin/LanguageButtons" groups=["Button"]]
+custom_minimum_size = Vector2(170, 40)
+layout_mode = 2
+texture_normal = ExtResource("22_jy6aq")
+texture_pressed = ExtResource("23_wvvpd")
+texture_hover = ExtResource("23_wvvpd")
+stretch_mode = 3
+
+[node name="EnglishButton" type="TextureButton" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin/LanguageButtons" groups=["Button"]]
+custom_minimum_size = Vector2(170, 40)
+layout_mode = 2
+texture_normal = ExtResource("23_ty45i")
+texture_pressed = ExtResource("25_cpxn5")
+texture_hover = ExtResource("25_cpxn5")
+stretch_mode = 3
+
+[node name="CatalanButton" type="TextureButton" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin/LanguageButtons" groups=["Button"]]
+custom_minimum_size = Vector2(170, 40)
+layout_mode = 2
+texture_normal = ExtResource("24_6b15j")
+texture_pressed = ExtResource("27_6kdi0")
+texture_hover = ExtResource("27_6kdi0")
+stretch_mode = 3
+
+[node name="OptionsContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CreditsContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="LoginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SignUpContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FlowControlContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="FlowControl" type="Control" parent="FlowControlContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BackButton" type="TextureButton" parent="FlowControlContainer/FlowControl" groups=["Button"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(62, 40)
+layout_mode = 1
+offset_right = 62.0
+offset_bottom = 40.0
+texture_normal = ExtResource("25_ikmlo")
+
+[node name="HTTPRequestProfile" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LogoutButton" to="." method="_on_logout_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin/LanguageButtons/SpanishButton" to="." method="_on_spanish_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin/LanguageButtons/EnglishButton" to="." method="_on_english_button_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/MenuMargin/MenuButtons/LanguageMargin/LanguageButtons/CatalanButton" to="." method="_on_catalan_button_pressed"]
+[connection signal="pressed" from="FlowControlContainer/FlowControl/BackButton" to="." method="_on_back_button_pressed"]

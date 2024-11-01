@@ -1,0 +1,301 @@
+[gd_scene load_steps=21 format=3 uid="uid://c2nthotr6ea0y"]
+
+[ext_resource type="Script" path="res://scenes/Menus/SignUpMenu/SignUp.gd" id="1_icg75"]
+[ext_resource type="Texture2D" uid="uid://iyl37a41t0dw" path="res://assets/images/login/bg_login.png" id="2_pcxkj"]
+[ext_resource type="Texture2D" uid="uid://bfmwxwtp5o378" path="res://assets/images/login/field_email.png" id="3_oxmx8"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="4_v08ua"]
+[ext_resource type="Texture2D" uid="uid://dts3dwfif3wqo" path="res://assets/images/login/field_pass.png" id="5_yee4c"]
+[ext_resource type="Texture2D" uid="uid://cs3xgx1cpljr2" path="res://assets/images/login/btn_login.png" id="6_dfmih"]
+[ext_resource type="Texture2D" uid="uid://bjy8mh23y3dby" path="res://assets/images/login/btn_login_p.png" id="7_8aq7v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ijw5y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g47b8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebdid"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v30m5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ic0dg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uds1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r42ts"]
+texture = ExtResource("6_dfmih")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58nja"]
+texture = ExtResource("7_8aq7v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uk8ob"]
+texture = ExtResource("7_8aq7v")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rxkd2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3a2di"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_he2ff"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xb8uj"]
+
+[node name="Registro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icg75")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_pcxkj")
+
+[node name="CntJuego" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(316, 628)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -552.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="CntUsernameBox" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="UsernameTextureRect" type="TextureRect" parent="CntJuego/CntUsernameBox"]
+custom_minimum_size = Vector2(453, 114)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_oxmx8")
+expand_mode = 2
+
+[node name="LEUsername" type="LineEdit" parent="CntJuego/CntUsernameBox"]
+custom_minimum_size = Vector2(385, 114)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_colors/font_placeholder_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ijw5y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g47b8")
+placeholder_text = "Username"
+virtual_keyboard_type = 5
+
+[node name="CntEmailBox" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="EmailTextureRect" type="TextureRect" parent="CntJuego/CntEmailBox"]
+custom_minimum_size = Vector2(453, 114)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_oxmx8")
+expand_mode = 2
+
+[node name="LEEmail" type="LineEdit" parent="CntJuego/CntEmailBox"]
+custom_minimum_size = Vector2(385, 114)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_colors/font_placeholder_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ebdid")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v30m5")
+placeholder_text = "Email"
+virtual_keyboard_type = 5
+
+[node name="CntPasswordBox" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CntJuego/CntPasswordBox"]
+custom_minimum_size = Vector2(453, 114)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_yee4c")
+expand_mode = 2
+
+[node name="LEPassword" type="LineEdit" parent="CntJuego/CntPasswordBox"]
+custom_minimum_size = Vector2(385, 114)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_colors/font_placeholder_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ic0dg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8uds1")
+placeholder_text = "Password"
+virtual_keyboard_type = 5
+secret = true
+
+[node name="CntAcceptBox" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="BtnAccept" type="TextureButton" parent="CntJuego/CntAcceptBox"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ChkAccept" type="CheckBox" parent="CntJuego/CntAcceptBox/BtnAccept"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 72.0
+offset_bottom = 24.0
+scale = Vector2(2.5, 2.5)
+size_flags_horizontal = 10
+mouse_filter = 2
+
+[node name="LblAccept" type="Label" parent="CntJuego/CntAcceptBox/BtnAccept"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+offset_left = 120.0
+offset_right = 586.0
+offset_bottom = 55.0
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 39
+text = "Acepto las condiciones"
+
+[node name="CntVerCondicionesBox" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="BtnVerCondiciones" type="TextureButton" parent="CntJuego/CntVerCondicionesBox"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LblAccept" type="Label" parent="CntJuego/CntVerCondicionesBox/BtnVerCondiciones"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 39
+text = "Ver condiciones"
+horizontal_alignment = 1
+
+[node name="CntNewsBox" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="BtnNews" type="TextureButton" parent="CntJuego/CntNewsBox"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ChkNews" type="CheckBox" parent="CntJuego/CntNewsBox/BtnNews"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 72.0
+offset_bottom = 24.0
+scale = Vector2(2.5, 2.5)
+size_flags_horizontal = 10
+mouse_filter = 2
+
+[node name="LblNews" type="Label" parent="CntJuego/CntNewsBox/BtnNews"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+offset_left = 120.0
+offset_right = 360.0
+offset_bottom = 23.0
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 39
+text = "Quiero la newsletter"
+
+[node name="CntResponseMessage" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="LblResponseMessage" type="Label" parent="CntJuego/CntResponseMessage"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CntBtnRegistrarse" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="BtnRegistrarse" type="Button" parent="CntJuego/CntBtnRegistrarse" groups=["Button"]]
+custom_minimum_size = Vector2(324, 120)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_hover_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_focus_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxTexture_r42ts")
+theme_override_styles/hover = SubResource("StyleBoxTexture_58nja")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uk8ob")
+text = "Sign Up"
+
+[node name="HTTPRequestRegistro" type="HTTPRequest" parent="CntJuego/CntBtnRegistrarse"]
+
+[node name="HTTPRequestLogin" type="HTTPRequest" parent="CntJuego/CntBtnRegistrarse"]
+
+[node name="CntBtnsFooter" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+
+[node name="BtnLogin" type="Button" parent="CntJuego/CntBtnsFooter" groups=["Button"]]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_pressed_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_hover_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_focus_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_fonts/font = ExtResource("4_v08ua")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rxkd2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3a2di")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_he2ff")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xb8uj")
+text = "Login"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 90
+
+[node name="HTTPRequestProfileSignUp" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="CntJuego/CntAcceptBox/BtnAccept" to="." method="_on_btn_accept_pressed"]
+[connection signal="pressed" from="CntJuego/CntVerCondicionesBox/BtnVerCondiciones" to="." method="_on_btn_ver_condiciones_pressed"]
+[connection signal="pressed" from="CntJuego/CntNewsBox/BtnNews" to="." method="_on_btn_news_pressed"]
+[connection signal="pressed" from="CntJuego/CntBtnRegistrarse/BtnRegistrarse" to="." method="_on_btn_registrarse_pressed"]
+[connection signal="pressed" from="CntJuego/CntBtnsFooter/BtnLogin" to="." method="_on_btn_login_pressed"]

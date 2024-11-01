@@ -1,0 +1,170 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7cujqetvswfv"]
+
+[ext_resource type="Script" path="res://scenes/GameScene/Elements/Information.gd" id="1_6ttyt"]
+[ext_resource type="Texture2D" uid="uid://ceptqchqj6ewu" path="res://assets/images/addFriend/bg_addafriend.png" id="2_tdlhx"]
+
+[sub_resource type="Theme" id="Theme_qy5s1"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Information" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ttyt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.443137, 0.443137, 0.443137, 0.501961)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -50.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tdlhx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -20.0
+offset_right = 300.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qy5s1")
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Instructions"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 3
+
+[node name="Label2" type="Label" parent="TextureRect/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TextureRect/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TextureRect/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TextureRect/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/MarginContainer4/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/VBoxContainer/MarginContainer4/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect/VBoxContainer/MarginContainer4/VBoxContainer"]
+layout_mode = 2
+text = "Test"
+horizontal_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 3
+
+[node name="Button" type="Button" parent="TextureRect/VBoxContainer/MarginContainer5" groups=["Button"]]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ok"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/MarginContainer5/Button" to="." method="_on_button_pressed"]

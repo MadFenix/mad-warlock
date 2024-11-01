@@ -1,0 +1,154 @@
+[gd_resource type="Theme" load_steps=38 format=3 uid="uid://bv2a6wh6lyl20"]
+
+[ext_resource type="FontFile" uid="uid://d2yytm0gsdkia" path="res://assets/font/Poppins-Regular.otf" id="1_ctacp"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="1_q6737"]
+[ext_resource type="Texture2D" uid="uid://bjn832xkxbttb" path="res://assets/images/home/scroll_horizontal.png" id="5_eyajy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5c1wu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2awsf"]
+texture_margin_left = 70.0
+texture_margin_top = 30.0
+texture_margin_right = 70.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xruk"]
+texture_margin_left = 70.0
+texture_margin_top = 30.0
+texture_margin_right = 70.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gr0hc"]
+texture_margin_left = 70.0
+texture_margin_top = 30.0
+texture_margin_right = 70.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0h8yd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pdes8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3s2v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_le83g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8cmx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5y70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yec3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37ghh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dmtgu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bngtm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8cgx"]
+texture = ExtResource("5_eyajy")
+texture_margin_left = 50.0
+texture_margin_right = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8etm"]
+texture = ExtResource("5_eyajy")
+texture_margin_left = 50.0
+texture_margin_right = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bwj8g"]
+texture = ExtResource("5_eyajy")
+texture_margin_left = 50.0
+texture_margin_right = 50.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xiqom"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwjts"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l7b1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5txad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gtgdi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia27s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfr7l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxuju"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjaha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmoj1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrunq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfboc"]
+bg_color = Color(0.393086, 0.393086, 0.393085, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vtj3"]
+texture_margin_top = 50.0
+texture_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbdlc"]
+texture_margin_top = 50.0
+texture_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glkhq"]
+texture_margin_top = 50.0
+texture_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a26wl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aivwt"]
+
+[resource]
+default_font = ExtResource("1_ctacp")
+default_font_size = 14
+Button/colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+Button/colors/font_focus_color = Color(0.176471, 0.0745098, 0.054902, 1)
+Button/colors/font_hover_color = Color(0.176471, 0.0745098, 0.054902, 1)
+Button/colors/font_hover_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 0)
+Button/colors/icon_hover_color = Color(1, 1, 1, 0)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+Button/colors/icon_normal_color = Color(1, 1, 1, 0)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 0)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_q6737")
+Button/styles/focus = SubResource("StyleBoxEmpty_5c1wu")
+Button/styles/hover = SubResource("StyleBoxTexture_2awsf")
+Button/styles/normal = SubResource("StyleBoxTexture_0xruk")
+Button/styles/pressed = SubResource("StyleBoxTexture_gr0hc")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_0h8yd")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_pdes8")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_j3s2v")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_le83g")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_v8cmx")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_h5y70")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_yec3o")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_37ghh")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_dmtgu")
+CheckButton/styles/pressed = SubResource("StyleBoxEmpty_bngtm")
+HScrollBar/styles/grabber = SubResource("StyleBoxTexture_x8cgx")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_l8etm")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_bwj8g")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_xiqom")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_dwjts")
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("1_ctacp")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_6l7b1")
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_5txad")
+OptionButton/styles/hover = SubResource("StyleBoxEmpty_gtgdi")
+OptionButton/styles/hover_mirrored = SubResource("StyleBoxEmpty_ia27s")
+OptionButton/styles/normal = SubResource("StyleBoxEmpty_lfr7l")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxEmpty_gxuju")
+OptionButton/styles/pressed = SubResource("StyleBoxEmpty_sjaha")
+OptionButton/styles/pressed_mirrored = SubResource("StyleBoxEmpty_gmoj1")
+ProgressBar/font_sizes/font_size = 8
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_qrunq")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_bfboc")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_7vtj3")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_xbdlc")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_glkhq")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_a26wl")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_aivwt")

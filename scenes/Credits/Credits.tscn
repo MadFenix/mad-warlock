@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://clabvuaem7bsx"]
+
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/Credits/Credits.tscn" id="1_enrln"]
+[ext_resource type="Script" path="res://scenes/Credits/Credits.gd" id="2_v7yp7"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="3_t7p4a"]
+
+[node name="Credits" instance=ExtResource("1_enrln")]
+script = ExtResource("2_v7yp7")
+attribution_file_path = "res://ATTRIBUTION.md"
+h1_font_size = 84
+h2_font_size = 68
+h3_font_size = 52
+h4_font_size = 48
+current_speed = 2.0
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+theme_override_fonts/normal_font = ExtResource("3_t7p4a")
+text = "[center]
+[font_size=48]Team[/font_size]
+
+[font_size=32]Director[/font_size]
+[url=https://linktr.ee/iamvalentigamez]Valentí Gàmez iam@valentigamez.com[/url] (Director y programador)
+
+[font_size=32]Developers[/font_size]
+[url=https://linktr.ee/iamvalentigamez]Valentí Gàmez iam@valentigamez.com[/url] (Director y programador)
+[url=https://jmgoya.itch.io/]Juan Goya jmgoya@gmail.com[/url] (Consultor de desarrollo)
+
+[font_size=32]Artists[/font_size]
+
+[url=https://www.instagram.com/darkacrystal.art]Crystal Oehlenschlaeger[/url] (Dirección artística)
+[url=https://beacons.ai/killerbunnyproject]Killer Bunny[/url] (Diseñadora en redes)
+
+[font_size=32]Music[/font_size]
+
+[url=https://frangoya.itch.io/]Fran Goya[/url] (Músico y compositor)
+
+[font_size=48]Libraries[/font_size]
+
+[font_size=32]Godot Game Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=https://github.com/MadFenix/gameJamLevelUp2024/tree/master/LICENSE.txt]MIT License[/url]  
+
+[font_size=32]Dialogic[/font_size]
+Author: [url=https://github.com/dialogic-godot/dialogic/graphs/contributors]Emi, Jowan and contributors[/url]  
+Source: [url=https://github.com/dialogic-godot/dialogic]github: Dialogic[/url]  
+License: [url=https://github.com/dialogic-godot/dialogic/blob/main/LICENSE]MIT License[/url]  
+
+[font_size=48]Tools[/font_size]
+[font_size=32]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=32]Git[/font_size]
+Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
+License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+[/center]"

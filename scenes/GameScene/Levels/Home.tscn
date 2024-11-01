@@ -1,0 +1,110 @@
+[gd_scene load_steps=18 format=3 uid="uid://4ionx33eq4yo"]
+
+[ext_resource type="Theme" uid="uid://bv2a6wh6lyl20" path="res://default_theme.tres" id="1_bhd25"]
+[ext_resource type="Script" path="res://scenes/GameScene/Levels/Level.gd" id="2_u6vy6"]
+[ext_resource type="Texture2D" uid="uid://uaojuihqlmi8" path="res://assets/images/home/bg_play.png" id="3_febdb"]
+[ext_resource type="Script" path="res://scenes/GameScene/Levels/Home.gd" id="4_4t6v4"]
+[ext_resource type="Texture2D" uid="uid://iv0i0d4bc53w" path="res://assets/images/home/btn_ranking.png" id="4_7g8bt"]
+[ext_resource type="Texture2D" uid="uid://1jdboi2s60ga" path="res://assets/images/home/btn_ranking_p.png" id="5_8gfpk"]
+[ext_resource type="Texture2D" uid="uid://2kff4qyne7tt" path="res://assets/images/home/btn_ranking_h.png" id="6_mogxu"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="7_5nh62"]
+[ext_resource type="Texture2D" uid="uid://bklkakrvm5rvb" path="res://assets/images/home/btn_season.png" id="8_8mgn2"]
+[ext_resource type="Texture2D" uid="uid://dxossofaetxn0" path="res://assets/images/home/btn_season_h.png" id="9_bh628"]
+[ext_resource type="Texture2D" uid="uid://cjnrr7a0qgd2a" path="res://assets/images/home/btn_user.png" id="10_agodi"]
+[ext_resource type="Texture2D" uid="uid://cduqkthbgxcms" path="res://assets/images/home/btn_user_p.png" id="11_cpyrd"]
+[ext_resource type="Texture2D" uid="uid://bl3moxphsjp3c" path="res://assets/images/home/btn_user_h.png" id="12_b0qo1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q8aw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7x2gu"]
+texture = ExtResource("9_bh628")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l0ymp"]
+texture = ExtResource("9_bh628")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82g1e"]
+texture = ExtResource("8_8mgn2")
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_bhd25")
+script = ExtResource("2_u6vy6")
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_febdb")
+
+[node name="HomeCnt" type="VBoxContainer" parent="." node_paths=PackedStringArray("home")]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+script = ExtResource("4_4t6v4")
+home = NodePath("..")
+
+[node name="TopBtnCnt" type="MarginContainer" parent="HomeCnt"]
+layout_mode = 2
+theme_override_constants/margin_left = 55
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 55
+theme_override_constants/margin_bottom = 0
+
+[node name="Buttons" type="HBoxContainer" parent="HomeCnt/TopBtnCnt"]
+layout_mode = 2
+
+[node name="RankingBtn" type="TextureButton" parent="HomeCnt/TopBtnCnt/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("4_7g8bt")
+texture_pressed = ExtResource("5_8gfpk")
+texture_hover = ExtResource("6_mogxu")
+
+[node name="MarginContainer" type="MarginContainer" parent="HomeCnt/TopBtnCnt/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="SeasonBtn" type="Button" parent="HomeCnt/TopBtnCnt/Buttons/MarginContainer"]
+custom_minimum_size = Vector2(307, 92)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_hover_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_focus_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("7_5nh62")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2q8aw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7x2gu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l0ymp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_82g1e")
+text = "Season"
+
+[node name="ProfileBtn" type="TextureButton" parent="HomeCnt/TopBtnCnt/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("10_agodi")
+texture_pressed = ExtResource("11_cpyrd")
+texture_hover = ExtResource("12_b0qo1")
+
+[node name="HomeLbl" type="Label" parent="HomeCnt"]
+layout_mode = 2
+text = "Home"
+
+[node name="HTTPRequestProfile" type="HTTPRequest" parent="HomeCnt"]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="HomeCnt/TopBtnCnt/Buttons/RankingBtn" to="HomeCnt" method="_on_ranking_btn_pressed"]
+[connection signal="pressed" from="HomeCnt/TopBtnCnt/Buttons/MarginContainer/SeasonBtn" to="HomeCnt" method="_on_season_btn_pressed"]
+[connection signal="pressed" from="HomeCnt/TopBtnCnt/Buttons/ProfileBtn" to="HomeCnt" method="_on_profile_btn_pressed"]

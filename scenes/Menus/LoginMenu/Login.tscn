@@ -1,0 +1,207 @@
+[gd_scene load_steps=20 format=3 uid="uid://be5jg3k5adenf"]
+
+[ext_resource type="Script" path="res://scenes/Menus/LoginMenu/Login.gd" id="1_4e157"]
+[ext_resource type="Texture2D" uid="uid://iyl37a41t0dw" path="res://assets/images/login/bg_login.png" id="2_ch8ug"]
+[ext_resource type="Texture2D" uid="uid://bfmwxwtp5o378" path="res://assets/images/login/field_email.png" id="3_7f6mc"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="4_brvpe"]
+[ext_resource type="Texture2D" uid="uid://dts3dwfif3wqo" path="res://assets/images/login/field_pass.png" id="5_vim31"]
+[ext_resource type="Texture2D" uid="uid://cs3xgx1cpljr2" path="res://assets/images/login/btn_login.png" id="6_efbv7"]
+[ext_resource type="Texture2D" uid="uid://bjy8mh23y3dby" path="res://assets/images/login/btn_login_p.png" id="7_hdqik"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3v24"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g0v1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5s3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_otnub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12ebr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5i1i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkdh6"]
+texture = ExtResource("7_hdqik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ynsgd"]
+texture = ExtResource("7_hdqik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jq6ka"]
+texture = ExtResource("6_efbv7")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a6yn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2mqa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_un1ny"]
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4e157")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_ch8ug")
+
+[node name="CntJuego" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -345.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="CntEmailBox" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="EmailTextureRect" type="TextureRect" parent="CntJuego/CntEmailBox"]
+custom_minimum_size = Vector2(648, 163)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_7f6mc")
+
+[node name="LEEmail" type="LineEdit" parent="CntJuego/CntEmailBox"]
+custom_minimum_size = Vector2(550, 163)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_placeholder_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_brvpe")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y3v24")
+placeholder_text = "Email"
+virtual_keyboard_type = 5
+
+[node name="CntPasswordBox" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="PasswordTextureRect" type="TextureRect" parent="CntJuego/CntPasswordBox"]
+custom_minimum_size = Vector2(648, 163)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_vim31")
+
+[node name="LEPassword" type="LineEdit" parent="CntJuego/CntPasswordBox"]
+custom_minimum_size = Vector2(550, 163)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_placeholder_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_brvpe")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g0v1o")
+placeholder_text = "Password"
+virtual_keyboard_type = 6
+secret = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="CntResponseMessage" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="LblResponseMessage" type="Label" parent="CntJuego/CntResponseMessage"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.627451, 1)
+theme_override_fonts/font = ExtResource("4_brvpe")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="CntBtnsFooter2" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_right = 55
+
+[node name="BtnForgot" type="Button" parent="CntJuego/CntBtnsFooter2" groups=["Button"]]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_hover_pressed_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_hover_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_pressed_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_focus_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_fonts/font = ExtResource("4_brvpe")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e5s3x")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_otnub")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_12ebr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c5i1i")
+text = "I forgot my password"
+
+[node name="CntBtnLogin" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+
+[node name="BtnLogin" type="Button" parent="CntJuego/CntBtnLogin" groups=["Button"]]
+custom_minimum_size = Vector2(464, 174)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_hover_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_focus_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("4_brvpe")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/hover = SubResource("StyleBoxTexture_dkdh6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ynsgd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jq6ka")
+text = "Login"
+
+[node name="HTTPRequestLogin" type="HTTPRequest" parent="CntJuego/CntBtnLogin"]
+
+[node name="CntBtnsFooter" type="HBoxContainer" parent="CntJuego"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+
+[node name="BtnRegistro" type="Button" parent="CntJuego/CntBtnsFooter" groups=["Button"]]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_hover_pressed_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_hover_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_pressed_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_focus_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_colors/font_color = Color(0.792157, 0.619608, 0.403922, 1)
+theme_override_fonts/font = ExtResource("4_brvpe")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0a6yn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q2mqa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_un1ny")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c5i1i")
+text = "Sign up"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CntJuego"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 90
+
+[node name="HTTPRequestProfileLogin" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="CntJuego/CntBtnsFooter2/BtnForgot" to="." method="_on_btn_forgot_pressed"]
+[connection signal="pressed" from="CntJuego/CntBtnLogin/BtnLogin" to="." method="_on_btn_login_pressed"]
+[connection signal="pressed" from="CntJuego/CntBtnsFooter/BtnRegistro" to="." method="_on_btn_registro_pressed"]

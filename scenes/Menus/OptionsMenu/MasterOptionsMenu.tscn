@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4gb821uhcxfi"]
+
+[ext_resource type="PackedScene" uid="uid://bvwl11s2p0hd" path="res://addons/maaacks_game_template/base/scenes/Menus/OptionsMenu/MasterOptionsMenu.tscn" id="1_ovbpr"]
+[ext_resource type="Script" path="res://scenes/Menus/OptionsMenu/MasterOptionsMenu.gd" id="2_kkt0m"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="3_817f7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a54p7"]
+bg_color = Color(0.796078, 0.733333, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bknar"]
+bg_color = Color(0.176471, 0.0745098, 0.054902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kai6"]
+bg_color = Color(0.796078, 0.733333, 0.627451, 1)
+
+[node name="MasterOptionsMenu" instance=ExtResource("1_ovbpr")]
+script = ExtResource("2_kkt0m")
+
+[node name="TabContainer" parent="." index="0"]
+offset_left = 50.0
+offset_top = 70.0
+offset_right = -50.0
+offset_bottom = -70.0
+theme_override_fonts/font = ExtResource("3_817f7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_a54p7")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_bknar")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8kai6")
