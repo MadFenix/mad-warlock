@@ -26,7 +26,17 @@ License: [MIT License](https://github.com/MadFenix/gameJamLevelUp2024/tree/maste
 ### Dialogic
 Author: [Emi, Jowan and contributors](https://github.com/dialogic-godot/dialogic/graphs/contributors)  
 Source: [github: Dialogic](https://github.com/dialogic-godot/dialogic)  
-License: [MIT License](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE)  
+License: [MIT License](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE)   
+
+### Mossy Cavern
+Author: [Maaot](https://maaot.itch.io/)  
+Source: [itch: Mossy Cavern](https://maaot.itch.io/mossy-cavern)  
+License: [Open source](https://maaot.itch.io/mossy-cavern)     
+
+### Dark Cavern
+Author: [Maaot](https://maaot.itch.io/)  
+Source: [itch: Dark Cavern](https://maaot.itch.io/2d-browncave-assets)  
+License: [Open source](https://maaot.itch.io/2d-browncave-assets) 
 
 ## Tools
 ### Godot
