@@ -46,9 +46,12 @@ func advance_level() -> bool:
 	return true
 
 func _attach_level(level_resource : Resource):
-	assert(level_container != null, "level_container is null")
+	#assert(level_container != null, "level_container is null")
 	var instance = level_resource.instantiate()
-	level_container.call_deferred("add_child", instance)
+	#level_container.call_deferred("add_child", instance)
+	Transitions.scene_container = level_container
+	Transitions._current_scene = level_container.get_child(0)
+	FancyFade.blurry_noise(instance)
 	return instance
 
 func _clear_current_level():
@@ -57,7 +60,7 @@ func _clear_current_level():
 	current_level = null
 
 func load_level(level_id : int = get_current_level_id()):
-	_clear_current_level()
+	#_clear_current_level()
 	var level_file = get_level_file(level_id)
 	SceneLoader.load_scene(level_file, true)
 	emit_signal("level_load_started")

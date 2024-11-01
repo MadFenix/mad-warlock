@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dbxq20lxewlf1"]
+[gd_scene load_steps=30 format=3 uid="uid://dbxq20lxewlf1"]
 
 [ext_resource type="Theme" uid="uid://bv2a6wh6lyl20" path="res://default_theme.tres" id="1_ou4xd"]
 [ext_resource type="Script" path="res://scenes/GameScene/GameUI.gd" id="1_xquw8"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://scenes/GameScene/InputDisplayLabel.gd" id="10_yni8k"]
 [ext_resource type="AudioStream" uid="uid://tui86stennr3" path="res://assets/sound/sound_magic.ogg" id="11_edaqk"]
 [ext_resource type="Script" path="res://scenes/GameScene/GuiContainer.gd" id="13_f0a1u"]
+[ext_resource type="Script" path="res://scenes/GameScene/Levels/Level.gd" id="14_t4yie"]
 [ext_resource type="Texture2D" uid="uid://iv0i0d4bc53w" path="res://assets/images/home/btn_ranking.png" id="14_t260u"]
 [ext_resource type="Texture2D" uid="uid://1jdboi2s60ga" path="res://assets/images/home/btn_ranking_p.png" id="15_lnfv2"]
 [ext_resource type="Texture2D" uid="uid://2kff4qyne7tt" path="res://assets/images/home/btn_ranking_h.png" id="16_ysvau"]
@@ -96,6 +97,9 @@ gui_embed_subwindows = true
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 script = ExtResource("9_ba104")
+
+[node name="LevelContainer" type="Node2D" parent="ViewportContainer2/ConfigurableSubViewport"]
+script = ExtResource("14_t4yie")
 
 [node name="GUIContainer" type="Control" parent="." node_paths=PackedStringArray("GameUI")]
 layout_mode = 1
