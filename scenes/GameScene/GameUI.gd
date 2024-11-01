@@ -16,20 +16,16 @@ func _on_level_won():
 	#$LevelLoader.advance_and_load_level()
 	$LevelLoader.switch_level()
 	
-func _on_level_ranking():
+func go_level_ranking():
 	$LevelLoader.switch_level_by_id(1)
 	
-func _on_level_home():
+func go_level_home():
 	$LevelLoader.switch_level_by_id(0)
 
 func _on_level_loader_level_loaded():
 	await $LevelLoader.current_level.ready
 	if $LevelLoader.current_level.has_signal("level_won"):
 		$LevelLoader.current_level.level_won.connect(_on_level_won)
-	if $LevelLoader.current_level.has_signal("level_ranking"):
-		$LevelLoader.current_level.level_ranking.connect(_on_level_ranking)
-	if $LevelLoader.current_level.has_signal("level_home"):
-		$LevelLoader.current_level.level_home.connect(_on_level_home)
 	if $LevelLoader.current_level.has_signal("level_won_finally"):
 		$LevelLoader.current_level.level_won_finally.connect(_on_level_won_finally)
 	if $LevelLoader.current_level.has_signal("level_lost"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dbxq20lxewlf1"]
+[gd_scene load_steps=29 format=3 uid="uid://dbxq20lxewlf1"]
 
 [ext_resource type="Theme" uid="uid://bv2a6wh6lyl20" path="res://default_theme.tres" id="1_ou4xd"]
 [ext_resource type="Script" path="res://scenes/GameScene/GameUI.gd" id="1_xquw8"]
@@ -14,6 +14,27 @@
 [ext_resource type="AudioStream" uid="uid://bg675o1nl4q50" path="res://assets/sound/sound_button.ogg" id="10_cvlwt"]
 [ext_resource type="Script" path="res://scenes/GameScene/InputDisplayLabel.gd" id="10_yni8k"]
 [ext_resource type="AudioStream" uid="uid://tui86stennr3" path="res://assets/sound/sound_magic.ogg" id="11_edaqk"]
+[ext_resource type="Script" path="res://scenes/GameScene/GuiContainer.gd" id="13_f0a1u"]
+[ext_resource type="Texture2D" uid="uid://iv0i0d4bc53w" path="res://assets/images/home/btn_ranking.png" id="14_t260u"]
+[ext_resource type="Texture2D" uid="uid://1jdboi2s60ga" path="res://assets/images/home/btn_ranking_p.png" id="15_lnfv2"]
+[ext_resource type="Texture2D" uid="uid://2kff4qyne7tt" path="res://assets/images/home/btn_ranking_h.png" id="16_ysvau"]
+[ext_resource type="FontFile" uid="uid://h0xy5843nic0" path="res://assets/font/Poppins-Bold.ttf" id="17_3gipc"]
+[ext_resource type="Texture2D" uid="uid://dxossofaetxn0" path="res://assets/images/home/btn_season_h.png" id="18_p0vhi"]
+[ext_resource type="Texture2D" uid="uid://bklkakrvm5rvb" path="res://assets/images/home/btn_season.png" id="19_frav6"]
+[ext_resource type="Texture2D" uid="uid://cjnrr7a0qgd2a" path="res://assets/images/home/btn_user.png" id="20_k8duu"]
+[ext_resource type="Texture2D" uid="uid://cduqkthbgxcms" path="res://assets/images/home/btn_user_p.png" id="21_2p327"]
+[ext_resource type="Texture2D" uid="uid://bl3moxphsjp3c" path="res://assets/images/home/btn_user_h.png" id="22_vboni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_auil4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_78ijo"]
+texture = ExtResource("18_p0vhi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qt4y"]
+texture = ExtResource("18_p0vhi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ko115"]
+texture = ExtResource("19_frav6")
 
 [node name="GameUI" type="Control"]
 layout_mode = 3
@@ -34,7 +55,7 @@ pause_menu_packed = ExtResource("5_86gef")
 
 [node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("6_y03ga")
-level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
+level_container = NodePath("../ViewportContainer2/ConfigurableSubViewport")
 files = Array[String](["res://scenes/GameScene/Levels/Home.tscn", "res://scenes/GameScene/Levels/Ranking.tscn"])
 directory = "res://scenes/GameScene/Levels"
 
@@ -56,20 +77,7 @@ bus = &"SFX"
 [node name="LoadingScreen" parent="." instance=ExtResource("8_elxsf")]
 visible = false
 
-[node name="ViewportContainer" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 720.0
-offset_bottom = 1280.0
-mouse_filter = 1
-
-[node name="ConfigurableSubViewport" type="Control" parent="ViewportContainer"]
-anchors_preset = 0
-offset_right = 720.0
-offset_bottom = 1280.0
-mouse_filter = 1
-
 [node name="ViewportContainer2" type="SubViewportContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,16 +86,82 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="ConfigurableSubViewport2" type="SubViewport" parent="ViewportContainer2"]
+[node name="ConfigurableSubViewport" type="SubViewport" parent="ViewportContainer2"]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 audio_listener_enable_2d = true
 audio_listener_enable_3d = true
 physics_object_picking = true
 gui_embed_subwindows = true
-size = Vector2i(720, 1280)
-render_target_update_mode = 0
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
 script = ExtResource("9_ba104")
+
+[node name="GUIContainer" type="Control" parent="." node_paths=PackedStringArray("GameUI")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 1
+script = ExtResource("13_f0a1u")
+GameUI = NodePath("..")
+
+[node name="TopBtnCnt" type="MarginContainer" parent="GUIContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -341.5
+offset_right = 341.5
+offset_bottom = 166.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 55
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 55
+theme_override_constants/margin_bottom = 0
+
+[node name="Buttons" type="HBoxContainer" parent="GUIContainer/TopBtnCnt"]
+layout_mode = 2
+
+[node name="ChangeLvlBtn" type="TextureButton" parent="GUIContainer/TopBtnCnt/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("14_t260u")
+texture_pressed = ExtResource("15_lnfv2")
+texture_hover = ExtResource("16_ysvau")
+
+[node name="MarginContainer" type="MarginContainer" parent="GUIContainer/TopBtnCnt/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="SeasonBtn" type="Button" parent="GUIContainer/TopBtnCnt/Buttons/MarginContainer"]
+custom_minimum_size = Vector2(307, 92)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_hover_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_pressed_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_focus_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_colors/font_color = Color(0.176471, 0.0745098, 0.054902, 1)
+theme_override_fonts/font = ExtResource("17_3gipc")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_auil4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_78ijo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5qt4y")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ko115")
+text = "Season"
+
+[node name="ProfileBtn" type="TextureButton" parent="GUIContainer/TopBtnCnt/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("20_k8duu")
+texture_pressed = ExtResource("21_2p327")
+texture_hover = ExtResource("22_vboni")
+
+[node name="HTTPRequestProfile" type="HTTPRequest" parent="GUIContainer"]
+unique_name_in_owner = true
 
 [node name="InputDisplayLabel" type="Label" parent="."]
 visible = false
@@ -105,9 +179,9 @@ horizontal_alignment = 1
 autowrap_mode = 2
 script = ExtResource("10_yni8k")
 
-[node name="HTTPRequestProfile" type="HTTPRequest" parent="."]
-unique_name_in_owner = true
-
 [connection signal="level_load_started" from="LevelLoader" to="." method="_on_level_loader_level_load_started"]
 [connection signal="level_loaded" from="LevelLoader" to="." method="_on_level_loader_level_loaded"]
 [connection signal="levels_finished" from="LevelLoader" to="." method="_on_level_loader_levels_finished"]
+[connection signal="pressed" from="GUIContainer/TopBtnCnt/Buttons/ChangeLvlBtn" to="GUIContainer" method="_on_change_lvl_btn_pressed"]
+[connection signal="pressed" from="GUIContainer/TopBtnCnt/Buttons/MarginContainer/SeasonBtn" to="GUIContainer" method="_on_season_btn_pressed"]
+[connection signal="pressed" from="GUIContainer/TopBtnCnt/Buttons/ProfileBtn" to="GUIContainer" method="_on_profile_btn_pressed"]

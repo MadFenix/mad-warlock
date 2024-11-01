@@ -3,8 +3,6 @@ extends Node
 @export_file("*.tscn") var main_menu_scene : String = "res://scenes/Menus/MainMenu/MainMenu.tscn"
 
 signal level_won
-signal level_ranking
-signal level_home
 signal level_lost
 signal level_won_finally
 
