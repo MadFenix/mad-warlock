@@ -35,12 +35,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"Valenti": "res://assets/dialogic/characters/Valenti.dch"
-}
-directories/dtl_directory={
-"won": "res://assets/dialogic/timelines/won.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 variables={}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
