@@ -36,7 +36,10 @@ License: [Open source](https://maaot.itch.io/mossy-cavern)
 ### Dark Cavern
 Author: [Maaot](https://maaot.itch.io/)  
 Source: [itch: Dark Cavern](https://maaot.itch.io/2d-browncave-assets)  
-License: [Open source](https://maaot.itch.io/2d-browncave-assets) 
+
+### Advanced Player State Machine by Findemor
+Author: [Findemor](https://www.findemor.es/)  
+Source: [Github: Maquina de estados](https://github.com/findemor/findemor-youtube-ejemplo-maquina-estados-godot/tree/main)  
 
 ## Tools
 ### Godot

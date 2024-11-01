@@ -1,6 +1,7 @@
-[gd_scene load_steps=68 format=3 uid="uid://cc2boic8t5im6"]
+[gd_scene load_steps=76 format=3 uid="uid://cc2boic8t5im6"]
 
 [ext_resource type="Script" path="res://scenes/GameScene/Player/Player.gd" id="1_j6jwi"]
+[ext_resource type="Script" path="res://scenes/GameScene/Player/CharacterMovementsStats.gd" id="2_jimxv"]
 [ext_resource type="Texture2D" uid="uid://8thxjysyek2m" path="res://assets/images/character/blueWizard/Idle/Chara - BlueIdle00000.png" id="2_vsafn"]
 [ext_resource type="Texture2D" uid="uid://bihf4lwbq6pbd" path="res://assets/images/character/blueWizard/Dash3/Dash3_00000.png" id="3_7ums3"]
 [ext_resource type="Texture2D" uid="uid://bvoy2lhwa0gy3" path="res://assets/images/character/blueWizard/Dash3/Dash3_00001.png" id="4_10om0"]
@@ -65,6 +66,30 @@
 [ext_resource type="Texture2D" uid="uid://jbrnpfuah3af" path="res://assets/images/character/blueWizard/Walk/Chara_BlueWalk00017.png" id="63_2ys3h"]
 [ext_resource type="Texture2D" uid="uid://fwoldenudqfl" path="res://assets/images/character/blueWizard/Walk/Chara_BlueWalk00018.png" id="64_vquav"]
 [ext_resource type="Texture2D" uid="uid://cxwuynyy3rjdp" path="res://assets/images/character/blueWizard/Walk/Chara_BlueWalk00019.png" id="65_t2klc"]
+[ext_resource type="Script" path="res://scenes/GameScene/Elements/StateMachine/StateMachine.gd" id="67_fji84"]
+[ext_resource type="Script" path="res://scenes/GameScene/Player/StateMachine/PlayerStateIdle.gd" id="68_76h0u"]
+[ext_resource type="Script" path="res://scenes/GameScene/Player/StateMachine/PlayerStateCrouched.gd" id="69_gl653"]
+[ext_resource type="Script" path="res://scenes/GameScene/Player/StateMachine/PlayerStateFall.gd" id="70_wfpv8"]
+[ext_resource type="Script" path="res://scenes/GameScene/Player/StateMachine/PlayerStateJump.gd" id="71_1gjxo"]
+[ext_resource type="Script" path="res://scenes/GameScene/Player/StateMachine/PlayerStateRun.gd" id="72_ym7pe"]
+
+[sub_resource type="Resource" id="Resource_wlhwv"]
+script = ExtResource("2_jimxv")
+running_speed = 500.0
+running_acceleration = 2000.0
+running_decceleration = 4000.0
+jump_speed = -500.0
+drop_jump_speed = -600.0
+in_air_speed = 400.0
+in_air_acceleration = 4000.0
+jump_small_speed = -300.0
+jumping_decceleration = 2000.0
+can_climbing = true
+climbing_speed = 400.0
+automove_ledge_climb = Vector2(500, -150)
+player_scale = 0.5
+MAX_VELOCITY_Y_TO_GRAB_WALLS = 1500.0
+MOVEMENT_REDUCTION_AFTER_AUTOMOVE = 0.5
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7aa0l"]
 radius = 35.0
@@ -287,17 +312,33 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_j6jwi")
+movement_stats = SubResource("Resource_wlhwv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_7aa0l")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_vsafn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_h4v3e")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("default_state")]
+script = ExtResource("67_fji84")
+default_state = NodePath("PlayerStateIdle")
+
+[node name="PlayerStateIdle" type="Node" parent="StateMachine"]
+script = ExtResource("68_76h0u")
+
+[node name="PlayerStateCrouched" type="Node" parent="StateMachine"]
+script = ExtResource("69_gl653")
+
+[node name="PlayerStateFall" type="Node" parent="StateMachine"]
+script = ExtResource("70_wfpv8")
+
+[node name="PlayerStateJump" type="Node" parent="StateMachine"]
+script = ExtResource("71_1gjxo")
+
+[node name="PlayerStateRun" type="Node" parent="StateMachine"]
+script = ExtResource("72_ym7pe")

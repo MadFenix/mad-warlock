@@ -1,25 +1,23 @@
+class_name Player
 extends CharacterBody2D
 
+@export var movement_stats:CharacterMovementStats
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@onready var body: Node2D = $AnimatedSprite2D
+@onready var animation_player = $AnimatedSprite2D
 
+var states:PlayerStateNames = PlayerStateNames.new()
+var animations:PlayerAnimations = PlayerAnimations.new()
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func set_facing_direction(x:float) -> void:
+	if abs(x) > 0:
+		body.scale.x = -movement_stats.player_scale if (x < 0) else movement_stats.player_scale
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+func is_facing_right() -> bool:
+	return body.scale.x > 0
+	
+func _process(_delta):
+	set_facing_direction(velocity.x)
+	
+func play_animation(animation_name:String):
+	animation_player.play(animation_name)
