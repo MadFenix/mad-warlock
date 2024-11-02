@@ -28,6 +28,11 @@ Author: [Emi, Jowan and contributors](https://github.com/dialogic-godot/dialogic
 Source: [github: Dialogic](https://github.com/dialogic-godot/dialogic)  
 License: [MIT License](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE)   
 
+### Fancy Fades for Godot
+Author: [nightblade9](https://github.com/nightblade9)  
+Source: [github: Fancy Fades](https://github.com/nightblade9/godot-fancy-scene-changes/tree/main)  
+License: [MIT License](https://github.com/nightblade9/godot-fancy-scene-changes/blob/main/LICENSE)    
+
 ### Mossy Cavern
 Author: [Maaot](https://maaot.itch.io/)  
 Source: [itch: Mossy Cavern](https://maaot.itch.io/mossy-cavern)  
